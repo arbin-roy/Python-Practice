@@ -1,0 +1,840 @@
+DB3ECA984D0F2349E0530100007F175F	Fusion	NDF_VendorMaster_3375_SubProcess	3375		NDFSubProcess	NDF	NDF	prd2soa1_server2	27-MAR-22 07.08.41.830000000 PM	c69b191b-eacf-4a97-9c67-41361f6dccb4	GVID|SupplierID|BusinessProcessID|MainFlowID	1000039439|177232892|211015394|620389764	Failed to process. ScopeName : Scope_NDFSubProcess,FaultName : remoteFault, FaultMessage : Error occured in service  due to Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404	Permanent	(BLOB)	remoteFault	NA	"com.oracle.bpel.client.BPELFault: faultName: {{http://schemas.oracle.com/bpel/extension}remoteFault}
+messageType: {{http://schemas.oracle.com/bpel/extension}RuntimeFaultMessage}
+parts: {{
+summary=<summary>Error occured in service  due to Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404</summary>
+,code=<code>OSB-382500</code>
+,detail=<detail>&lt;con:details xmlns:con="http://www.bea.com/wli/sb/context">
+  &lt;con1:ReceivedFaultDetail xmlns:con1="http://www.bea.com/wli/sb/stages/transform/config">
+    &lt;con1:faultcode>soapenv:Server&lt;/con1:faultcode>
+    &lt;con1:faultstring>REST Business Service returned HTTP response with status 404&lt;/con1:faultstring>
+    &lt;con1:http-response-code>404&lt;/con1:http-response-code>
+    &lt;con1:response-headers xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="http:HttpResponseHeaders">
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="Access-Control-Allow-Origin" value="*"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amz-apigw-id" value="PrDKjHpAPHcF_7Q="/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Connection" value="keep-alive"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Content-Length" value="0"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Date" value="Mon, 28 Mar 2022 02:08:41 GMT"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-RequestId" value="aeb399af-e5cd-42f1-9509-21ce2ba18a10"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="X-Amzn-Trace-Id" value="Root=1-624118a9-6618135b35d9c65e28a9d8b1"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="X-Powered-By" value="Express"/>
+      &lt;http:Connection>keep-alive&lt;/http:Connection>
+      &lt;http:Content-Length>0&lt;/http:Content-Length>
+      &lt;http:Content-Type>application/json&lt;/http:Content-Type>
+      &lt;http:Date>Mon, 28 Mar 2022 02:08:41 GMT&lt;/http:Date>
+    &lt;/con1:response-headers>
+  &lt;/con1:ReceivedFaultDetail>
+&lt;/con:details>
+</detail>}"	Scope_NDFSubProcess														"<UDH/>
+"		52961662	28-MAR-22		
+DB3E41A51AF0363BE0530100007F951E	OSB	NDF_BankingInfoRead_3376_TCS_PS_1.00	3376			NDF	NDF	prd2osb4_server2	27-MAR-22 07.08.41.795000000 PM	c69b191b-eacf-4a97-9c67-41361f6dccb4	GVID|SupplierID|BusinessProcessID	1000039439|177232892|211015394	Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404	Permanent	(BLOB)	OSB-382500		<ctx:details xmlns:ctx="http://www.bea.com/wli/sb/context"><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 404</ns0:faultstring><ns0:http-response-code>404</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Access-Control-Allow-Origin" value="*" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amz-apigw-id" value="PrDKjHpAPHcF_7Q=" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Connection" value="keep-alive" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Content-Length" value="0" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Date" value="Mon, 28 Mar 2022 02:08:41 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-RequestId" value="aeb399af-e5cd-42f1-9509-21ce2ba18a10" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Amzn-Trace-Id" value="Root=1-624118a9-6618135b35d9c65e28a9d8b1" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Powered-By" value="Express" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/json</http:Content-Type><http:Date>Mon, 28 Mar 2022 02:08:41 GMT</http:Date></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details>	stage_GET_BankingInformation														"<UDH/>
+"		52961661	28-MAR-22		
+DB3EA99B19A77D86E0530100007F73BA	OSB	AravoAck_IndirectVendor_3422_Sub_PS_1.00	3422			NDF	Aravo	prd2osb4_server4	27-MAR-22 07.00.19.961000000 PM	9e02f240-3515-4b7e-b7cd-3f9ba4e19d9d	GVID|SupplierID|BusinessProcessID|MainFlowID	1000041157|187581370|214235785|620387778	"Error invoking Complete Event Task . Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail:  Details: soapenv:ServerREST Business Service returned HTTP response with status 409409no-cache, no-store, must-revalidatekeep-alive0application/xml; charset=iso-8859-1Mon, 28 Mar 2022 02:00:19 GMTno-cache<cookie-values xmlns="http://www.bea.com/wli/sb/transports/http">
+  <value>rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Sun, 27-Mar-2022 02:00:19 GMT</value>
+  <value>JSESSIONID=69370BB19D444B1E4790A28712EABD9F; Path=/aems; Secure; HttpOnly</value>
+</cookie-values>."	Permanent	(BLOB)	OSB-382500	NA	"<ctx:fault xmlns:ctx="http://www.bea.com/wli/sb/context"><ctx:errorCode>OSB-382500</ctx:errorCode><ctx:reason>OSB Service Callout action received SOAP Fault response</ctx:reason><ctx:details><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 409</ns0:faultstring><ns0:http-response-code>409</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Expires" value="Sun, 27 Mar 2022 02:00:19 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Keep-Alive" value="timeout=20" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Referrer-Policy" value="origin-when-cross-origin" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Content-Type-Options" value="nosniff" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-DEVELOPER-MESSAGE" value="execution(void com.aravo.sim.platform.services.businessprocess.BusinessProcessService.completeWaitTask(Integer))" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-ID" value="ERRID-e0a017983--78d41b4e-4658-4673-951d-dfc16d9c6adb" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-MESSAGE" value="Current task with name &quot;SAP Bank Confirmation&quot; is not configured to complete on IntegrationTaskAutoComplete event" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-FRAME-OPTIONS" value="SAMEORIGIN" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-XSS-Protection" value="1; mode=block" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Cache-Control>no-cache, no-store, must-revalidate</http:Cache-Control><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/xml; charset=iso-8859-1</http:Content-Type><http:Date>Mon, 28 Mar 2022 02:00:19 GMT</http:Date><http:Pragma>no-cache</http:Pragma><http:Set-Cookie>&lt;cookie-values xmlns="http://www.bea.com/wli/sb/transports/http"&gt;
+  &lt;value&gt;rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Sun, 27-Mar-2022 02:00:19 GMT&lt;/value&gt;
+  &lt;value&gt;JSESSIONID=69370BB19D444B1E4790A28712EABD9F; Path=/aems; Secure; HttpOnly&lt;/value&gt;
+&lt;/cookie-values&gt;</http:Set-Cookie></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details><ctx:location><ctx:node>PipeLinePair</ctx:node><ctx:pipeline>PipeLinePair_request</ctx:pipeline><ctx:stage>stage_POST_CompleteTaskEvent</ctx:stage><ctx:path>request-pipeline</ctx:path></ctx:location></ctx:fault>"	stage_POST_CompleteTaskEvent	jms://int-osb4-01-v-prd2:9403,int-osb4-02-v-prd2:9403,int-osb4-03-v-prd2:9403,int-osb4-04-v-prd2:9403/jms.osbXAConnectionFactory/jms.vendorMasterAck_CDM	2	ID:<409586.1648432818533.0>	1648432818533	1649037618670	false	4					2147483647	1	"<UDH>
+<H>
+<K>JMS_BEA_RedeliveryLimit</K>
+<V>2147483647</V>
+</H>
+<H>
+<K>tracking_parentComponentInstanceId</K>
+<V>bpel:1555363753</V>
+</H>
+<H>
+<K>NIC</K>
+<V>2102</V>
+</H>
+<H>
+<K>GVID</K>
+<V>1000041157</V>
+</H>
+<H>
+<K>tracking_execution_context</K>
+<V>1.6359550b-5050-448a-b57c-daab1e3767e1-002721d0;lgQTkClhv0YOjITOZSPPi3VRXU8TmHROfPQRbUBGjTOSjJTQoLPIiJSTXURO_PGPt6ECk8CDr7FDs0XLjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP1HDDp5FCp8FDs7DWq6GRjNTI^PKCk0CCEQTH2VPQFMDRAROJBPVPs9TPl9MDk3OKk0ECcHPT0_RRmHROgLQBnVPOi4USXJRQdURPi1LTdLRSZPQRbVGS_ITOoPRRiUHOhLPHnHOSGLVScGMSjJPPnJSWZVQSXJOR_UBSjHQBoITOZRPQiNQB3VPRkVRSdKTPJJHG5UOTdKTU9KPDq0CCk2CWZVQSXJOR_UBSjHQBoITOZRPQiNQBHLTQ_JVOdURPJJHG5UOTdKTU9KPDq0CCk7CWMVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrLIT_UOT9KPGo6EDo0DDs5DCt0XPjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP3ITPXKTQjUOLdTPP4HEDo8CDn2CEl8DDn2CWUVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJIS_HOTdVQRKPPR_KHCq4CEo3DCq8CCt2ED0XNRmHROgLQBnVPOi4USXJRQdURPi6GRjNTI^PEDm0FCs7FDr8CWMVQSXJOR_UBSjHQBoITOZRPQiNQBJJHG5UOTdKTU9KPDq0CCl1CWXVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJNG1GLOmKTQoPRRiPGPl2CW3JOTsLKS^HOT_JLSgKCTmLTP</V>
+</H>
+<H>
+<K>BANKINGINFO</K>
+<V>
+<NdfIndirectBankingExportCollection xmlns="http://xmlns.int.nike.com/SupplierBankingInfo">
+<SupplierBankingInfo xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+<id>187581370-207873025</id>
+<bankingInformationCrossReferenceKey>207873025</bankingInformationCrossReferenceKey>
+<bankingInformationIdentifier>1000041157-3001</bankingInformationIdentifier>
+<bankingInformationActiveIndicator>true</bankingInformationActiveIndicator>
+<bankAccountHolderName>沈垚君</bankAccountHolderName>
+<bankName>中国工商银行上海市长宁福泉路支行</bankName>
+<currencyCode>CNY</currencyCode>
+<currencyCodeDescription>CNY - Chinese yuan</currencyCodeDescription>
+<bankAccountNumber>6222031001006676493</bankAccountNumber>
+<bankCountryCode>CN</bankCountryCode>
+<bankCountryDescription>China</bankCountryDescription>
+<bankKey>102290005416</bankKey>
+<sapBankKey>102290005416</sapBankKey>
+<bankType>1</bankType>
+<intermediaryBankRequiredIndicator>false</intermediaryBankRequiredIndicator>
+</SupplierBankingInfo>
+</NdfIndirectBankingExportCollection>
+</V>
+</H>
+<H>
+<K>ACCOUNTGROUP</K>
+<V>Indirect Trade</V>
+</H>
+<H>
+<K>tracking_compositeInstanceId</K>
+<V>620847778</V>
+</H>
+<H>
+<K>VENDORRELATIONSHIP</K>
+<V>
+<supplier xmlns="http://xmlns.int.nike.com/IndirectSupplier"/>
+</V>
+</H>
+<H>
+<K>SUPLRID</K>
+<V>187581370</V>
+</H>
+<H>
+<K>BPID</K>
+<V>214235785</V>
+</H>
+<H>
+<K>tracking_conversationId</K>
+<V>urn:d15a132a-ae3a-11ec-8731-02e3815e1116</V>
+</H>
+<H>
+<K>tracking_ecid</K>
+<V>c1659dd9-bb75-4d67-87e4-52750a671f7c-00267e1a</V>
+</H>
+</UDH>
+"	<StaticFields xmlns="http://www.nike.com/StaticVariables"><PlatformName>Fusion</PlatformName><ServiceName>GEM_NDF_SupplierReadIndirect_3374_SCS_PS_1.00</ServiceName><LinkID/><TrackID>9e02f240-3515-4b7e-b7cd-3f9ba4e19d9d</TrackID><BKeyName>GVID|SupplierID|BusinessProcessID|MainFlowID</BKeyName><BKeyText>1000041157|187581370|214235785|620387778</BKeyText><SendingApplicationText>NDF</SendingApplicationText><TargetApplicationText>NDF</TargetApplicationText><SenderText>NDFSubProcess</SenderText><FileName>NA</FileName></StaticFields>	52961620	28-MAR-22		
+DB3E9936171F7DC3E0530100007FA957	Fusion	NDF_VendorMaster_3375_SubProcess	3375		NDFSubProcess	NDF	NDF	prd2soa1_server4	27-MAR-22 06.54.53.321000000 PM	30a52177-b10e-4f92-8285-6fae71c20d52	GVID|SupplierID|BusinessProcessID|MainFlowID	1000041284|188242041|215409449|620401830	Failed to process. ScopeName : Scope_NDFSubProcess,FaultName : remoteFault, FaultMessage : Error occured in service  due to Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404	Permanent	(BLOB)	remoteFault	NA	"com.oracle.bpel.client.BPELFault: faultName: {{http://schemas.oracle.com/bpel/extension}remoteFault}
+messageType: {{http://schemas.oracle.com/bpel/extension}RuntimeFaultMessage}
+parts: {{
+summary=<summary>Error occured in service  due to Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404</summary>
+,code=<code>OSB-382500</code>
+,detail=<detail>&lt;con:details xmlns:con="http://www.bea.com/wli/sb/context">
+  &lt;con1:ReceivedFaultDetail xmlns:con1="http://www.bea.com/wli/sb/stages/transform/config">
+    &lt;con1:faultcode>soapenv:Server&lt;/con1:faultcode>
+    &lt;con1:faultstring>REST Business Service returned HTTP response with status 404&lt;/con1:faultstring>
+    &lt;con1:http-response-code>404&lt;/con1:http-response-code>
+    &lt;con1:response-headers xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="http:HttpResponseHeaders">
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="Access-Control-Allow-Origin" value="*"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amz-apigw-id" value="PrBJGHJ8PHcFVMg="/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Connection" value="keep-alive"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Content-Length" value="0"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Date" value="Mon, 28 Mar 2022 01:54:53 GMT"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-RequestId" value="aae8dcc6-d52d-475d-844c-2cbc30f7c394"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="X-Amzn-Trace-Id" value="Root=1-6241156d-06f036b14ffe3e6575a9632d"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="X-Powered-By" value="Express"/>
+      &lt;http:Connection>keep-alive&lt;/http:Connection>
+      &lt;http:Content-Length>0&lt;/http:Content-Length>
+      &lt;http:Content-Type>application/json&lt;/http:Content-Type>
+      &lt;http:Date>Mon, 28 Mar 2022 01:54:53 GMT&lt;/http:Date>
+    &lt;/con1:response-headers>
+  &lt;/con1:ReceivedFaultDetail>
+&lt;/con:details>
+</detail>}"	Scope_NDFSubProcess														"<UDH/>
+"		52961591	28-MAR-22		
+DB3E99335ACA047BE0530100007F944D	OSB	NDF_BankingInfoRead_3376_TCS_PS_1.00	3376			NDF	NDF	prd2osb4_server3	27-MAR-22 06.54.53.285000000 PM	30a52177-b10e-4f92-8285-6fae71c20d52	GVID|SupplierID|BusinessProcessID	1000041284|188242041|215409449	Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404	Permanent	(BLOB)	OSB-382500		<ctx:details xmlns:ctx="http://www.bea.com/wli/sb/context"><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 404</ns0:faultstring><ns0:http-response-code>404</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Access-Control-Allow-Origin" value="*" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amz-apigw-id" value="PrBJGHJ8PHcFVMg=" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Connection" value="keep-alive" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Content-Length" value="0" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Date" value="Mon, 28 Mar 2022 01:54:53 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-RequestId" value="aae8dcc6-d52d-475d-844c-2cbc30f7c394" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Amzn-Trace-Id" value="Root=1-6241156d-06f036b14ffe3e6575a9632d" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Powered-By" value="Express" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/json</http:Content-Type><http:Date>Mon, 28 Mar 2022 01:54:53 GMT</http:Date></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details>	stage_GET_BankingInformation														"<UDH/>
+"		52961590	28-MAR-22		
+DB2289836C40458AE0530100007FA60E	Fusion	NDF_VendorMaster_3375_SubProcess	3375		NDFSubProcess	NDF	NDF	prd2soa1_server1	26-MAR-22 09.26.10.835000000 AM	7217adaf-7705-4624-aa37-ae6cc168737c	GVID|SupplierID|BusinessProcessID|MainFlowID	1000041007|186661455|211534723|619316210	Failed to process. ScopeName : Scope_NDFSubProcess,FaultName : remoteFault, FaultMessage : Error occured in service  due to Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404	Permanent	(BLOB)	remoteFault	NA	"com.oracle.bpel.client.BPELFault: faultName: {{http://schemas.oracle.com/bpel/extension}remoteFault}
+messageType: {{http://schemas.oracle.com/bpel/extension}RuntimeFaultMessage}
+parts: {{
+summary=<summary>Error occured in service  due to Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404</summary>
+,code=<code>OSB-382500</code>
+,detail=<detail>&lt;con:details xmlns:con="http://www.bea.com/wli/sb/context">
+  &lt;con1:ReceivedFaultDetail xmlns:con1="http://www.bea.com/wli/sb/stages/transform/config">
+    &lt;con1:faultcode>soapenv:Server&lt;/con1:faultcode>
+    &lt;con1:faultstring>REST Business Service returned HTTP response with status 404&lt;/con1:faultstring>
+    &lt;con1:http-response-code>404&lt;/con1:http-response-code>
+    &lt;con1:response-headers xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="http:HttpResponseHeaders">
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="Access-Control-Allow-Origin" value="*"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amz-apigw-id" value="Pma5dGqpPHcFbOw="/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Connection" value="keep-alive"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Content-Length" value="0"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Date" value="Sat, 26 Mar 2022 16:26:10 GMT"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-RequestId" value="388879f5-08f7-436b-8a2b-84eccc2cc33c"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="X-Amzn-Trace-Id" value="Root=1-623f3ea2-28500a571c0b37b41cb97f62"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="X-Powered-By" value="Express"/>
+      &lt;http:Connection>keep-alive&lt;/http:Connection>
+      &lt;http:Content-Length>0&lt;/http:Content-Length>
+      &lt;http:Content-Type>application/json&lt;/http:Content-Type>
+      &lt;http:Date>Sat, 26 Mar 2022 16:26:10 GMT&lt;/http:Date>
+    &lt;/con1:response-headers>
+  &lt;/con1:ReceivedFaultDetail>
+&lt;/con:details>
+</detail>}"	Scope_NDFSubProcess														"<UDH/>
+"		52935969	26-MAR-22		
+DB2262BF4ACD357CE0530100007F7C64	OSB	NDF_BankingInfoRead_3376_TCS_PS_1.00	3376			NDF	NDF	prd2osb4_server1	26-MAR-22 09.26.10.798000000 AM	7217adaf-7705-4624-aa37-ae6cc168737c	GVID|SupplierID|BusinessProcessID	1000041007|186661455|211534723	Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404	Permanent	(BLOB)	OSB-382500		<ctx:details xmlns:ctx="http://www.bea.com/wli/sb/context"><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 404</ns0:faultstring><ns0:http-response-code>404</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Access-Control-Allow-Origin" value="*" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amz-apigw-id" value="Pma5dGqpPHcFbOw=" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Connection" value="keep-alive" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Content-Length" value="0" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Date" value="Sat, 26 Mar 2022 16:26:10 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-RequestId" value="388879f5-08f7-436b-8a2b-84eccc2cc33c" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Amzn-Trace-Id" value="Root=1-623f3ea2-28500a571c0b37b41cb97f62" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Powered-By" value="Express" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/json</http:Content-Type><http:Date>Sat, 26 Mar 2022 16:26:10 GMT</http:Date></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details>	stage_GET_BankingInformation														"<UDH/>
+"		52935971	26-MAR-22		
+DB136321F78B04D0E0530100007F57ED	OSB	AravoAck_IndirectVendor_3422_Sub_PS_1.00	3422			NDF	Aravo	prd2osb4_server4	25-MAR-22 03.42.12.201000000 PM	077a6ab2-e059-4627-97a4-fc07365e9cf6	GVID|SupplierID|BusinessProcessID|MainFlowID	1002034395|115434069|215409010|618917471	"Error invoking Complete Event Task . Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail:  Details: soapenv:ServerREST Business Service returned HTTP response with status 409409no-cache, no-store, must-revalidatekeep-alive0application/xml; charset=iso-8859-1Fri, 25 Mar 2022 22:42:12 GMTno-cache<cookie-values xmlns="http://www.bea.com/wli/sb/transports/http">
+  <value>rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 22:42:12 GMT</value>
+  <value>JSESSIONID=C1D12E7EDE48F9AD10BD4D755B422AB6; Path=/aems; Secure; HttpOnly</value>
+</cookie-values>."	Permanent	(BLOB)	OSB-382500	NA	"<ctx:fault xmlns:ctx="http://www.bea.com/wli/sb/context"><ctx:errorCode>OSB-382500</ctx:errorCode><ctx:reason>OSB Service Callout action received SOAP Fault response</ctx:reason><ctx:details><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 409</ns0:faultstring><ns0:http-response-code>409</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Expires" value="Thu, 24 Mar 2022 22:42:12 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Keep-Alive" value="timeout=20" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Referrer-Policy" value="origin-when-cross-origin" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Content-Type-Options" value="nosniff" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-DEVELOPER-MESSAGE" value="execution(void com.aravo.sim.platform.services.businessprocess.BusinessProcessService.completeWaitTask(Integer))" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-ID" value="ERRID-131456fa8--807ebf5e-3a94-44df-acf7-6b4d476a29ca" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-MESSAGE" value="Current task with name &quot;SAP Bank Confirmation&quot; is not configured to complete on IntegrationTaskAutoComplete event" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-FRAME-OPTIONS" value="SAMEORIGIN" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-XSS-Protection" value="1; mode=block" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Cache-Control>no-cache, no-store, must-revalidate</http:Cache-Control><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/xml; charset=iso-8859-1</http:Content-Type><http:Date>Fri, 25 Mar 2022 22:42:12 GMT</http:Date><http:Pragma>no-cache</http:Pragma><http:Set-Cookie>&lt;cookie-values xmlns="http://www.bea.com/wli/sb/transports/http"&gt;
+  &lt;value&gt;rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 22:42:12 GMT&lt;/value&gt;
+  &lt;value&gt;JSESSIONID=C1D12E7EDE48F9AD10BD4D755B422AB6; Path=/aems; Secure; HttpOnly&lt;/value&gt;
+&lt;/cookie-values&gt;</http:Set-Cookie></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details><ctx:location><ctx:node>PipeLinePair</ctx:node><ctx:pipeline>PipeLinePair_request</ctx:pipeline><ctx:stage>stage_POST_CompleteTaskEvent</ctx:stage><ctx:path>request-pipeline</ctx:path></ctx:location></ctx:fault>"	stage_POST_CompleteTaskEvent	jms://int-osb4-01-v-prd2:9403,int-osb4-02-v-prd2:9403,int-osb4-03-v-prd2:9403,int-osb4-04-v-prd2:9403/jms.osbXAConnectionFactory/jms.vendorMasterAck_CDM	2	ID:<294841.1648248131279.0>	1648248131279	1648852931400	false	4					2147483647	1	"<UDH>
+<H>
+<K>JMS_BEA_RedeliveryLimit</K>
+<V>2147483647</V>
+</H>
+<H>
+<K>tracking_parentComponentInstanceId</K>
+<V>bpel:1551732854</V>
+</H>
+<H>
+<K>NIC</K>
+<V>4530</V>
+</H>
+<H>
+<K>GVID</K>
+<V>1002034395</V>
+</H>
+<H>
+<K>tracking_execution_context</K>
+<V>1.2dd0dd5a-7496-4b85-9086-c9af5e0108f6-0001188f;l^KKnAxhv0YOjITOZSPPi3VRXU8TmHROfPQRbUBGjTOSjJTQoLPIiJSTXURO_PGPt6DCt3FDr4FDl0XLjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP1HDDp1FDn8DCn6DWq6GRjNTI^PKCk0CCEQVC2SJCgKDTgROJBPVTk9TPl9MDkFJIk0ECYSOK0_RRmHROgLQBnVPOi4USXJRQdURPi1LTdLRSZPQRbVGS_ITOoPRRiUHOhLPHnHOSGLVScGMSjJPPnJSWZVQSXJOR_UBSjHQBoITOZRPQiNQB3VPRkVRSdKTPJJHG5UOTdKTU9KPDq0CCk2CWZVQSXJOR_UBSjHQBoITOZRPQiNQBHLTQ_JVOdURPJJHG5UOTdKTU9KPDq0CCk7CWMVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrLIT_UOT9KPGo6DDn1CEr5CEk0XPjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP3ITPXKTQjUOLdTPP4HEDo8ECo8DCn1ECr8CWUVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJIS_HOTdVQRKPPR_KHCq4CEm4FDk0DCq9FD0XNRmHROgLQBnVPOi4USXJRQdURPi6GRjNTI^PEDl8DEl7CDr1CWMVQSXJOR_UBSjHQBoITOZRPQiNQBJJHG5UOTdKTU9KPDq0CCl1CWXVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJNG1GLOmKTQoPRRiPGPl2CW3JOTsLKS^HOT_JLSgKCTmLTP</V>
+</H>
+<H>
+<K>BANKINGINFO</K>
+<V>
+<NdfIndirectBankingExportCollection xmlns="http://xmlns.int.nike.com/SupplierBankingInfo">
+<SupplierBankingInfo xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+<id>115434069-132530219</id>
+<bankingInformationCrossReferenceKey>132530219</bankingInformationCrossReferenceKey>
+<bankingInformationIdentifier>1302033570</bankingInformationIdentifier>
+<bankingInformationActiveIndicator>true</bankingInformationActiveIndicator>
+<bankAccountHolderName>Alperia Sum Spa </bankAccountHolderName>
+<swiftBicCode>CRBZIT2B090</swiftBicCode>
+<bankName>CASSA di RISPARMIO di BOLZANO Spa </bankName>
+<currencyCode>EUR</currencyCode>
+<currencyCodeDescription>EUR - Euro</currencyCodeDescription>
+<bankAccountNumber>000005008159</bankAccountNumber>
+<bankAddress>VIA CASSA DI RISPARMIO, 12</bankAddress>
+<bankCity>BOLZANO</bankCity>
+<bankCountryCode>IT</bankCountryCode>
+<bankCountryDescription>Italy</bankCountryDescription>
+<sapBankKey>0604511600</sapBankKey>
+<bankAccountControlKey>G</bankAccountControlKey>
+<bankType>1</bankType>
+<ibanCode>IT26G0604511600000005008159</ibanCode>
+<intermediaryBankRequiredIndicator>false</intermediaryBankRequiredIndicator>
+</SupplierBankingInfo>
+</NdfIndirectBankingExportCollection>
+</V>
+</H>
+<H>
+<K>ACCOUNTGROUP</K>
+<V>Indirect Trade</V>
+</H>
+<H>
+<K>tracking_compositeInstanceId</K>
+<V>619377471</V>
+</H>
+<H>
+<K>VENDORRELATIONSHIP</K>
+<V>
+<supplier xmlns="http://xmlns.int.nike.com/IndirectSupplier"/>
+</V>
+</H>
+<H>
+<K>SUPLRID</K>
+<V>115434069</V>
+</H>
+<H>
+<K>BPID</K>
+<V>215409010</V>
+</H>
+<H>
+<K>tracking_conversationId</K>
+<V>urn:cf2b8faf-ac8c-11ec-a8eb-0a3f73b41dd0</V>
+</H>
+<H>
+<K>tracking_ecid</K>
+<V>ce51252f-a5cd-4c4e-a49b-049776d9b14a-002440df</V>
+</H>
+</UDH>
+"	<StaticFields xmlns="http://www.nike.com/StaticVariables"><PlatformName>Fusion</PlatformName><ServiceName>GEM_NDF_SupplierReadIndirect_3374_SCS_PS_1.00</ServiceName><LinkID/><TrackID>077a6ab2-e059-4627-97a4-fc07365e9cf6</TrackID><BKeyName>GVID|SupplierID|BusinessProcessID|MainFlowID</BKeyName><BKeyText>1002034395|115434069|215409010|618917471</BKeyText><SendingApplicationText>NDF</SendingApplicationText><TargetApplicationText>NDF</TargetApplicationText><SenderText>NDFSubProcess</SenderText><FileName>NA</FileName></StaticFields>	52850700	25-MAR-22		
+DB11F85559CC0B9AE0530100007F50AE	Fusion	NDF_VendorMaster_3375_SubProcess	3375		NDFSubProcess	NDF	NDF	prd2soa1_server1	25-MAR-22 02.21.08.150000000 PM	43ddeba9-f01f-4459-8917-bdc56da93efa	GVID|SupplierID|BusinessProcessID|MainFlowID	1000040913|186281350|209646768|618879773	Failed to process. ScopeName : Scope_NDFSubProcess,FaultName : remoteFault, FaultMessage : Error occured in service  due to Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404	Permanent	(BLOB)	remoteFault	NA	"com.oracle.bpel.client.BPELFault: faultName: {{http://schemas.oracle.com/bpel/extension}remoteFault}
+messageType: {{http://schemas.oracle.com/bpel/extension}RuntimeFaultMessage}
+parts: {{
+summary=<summary>Error occured in service  due to Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404</summary>
+,code=<code>OSB-382500</code>
+,detail=<detail>&lt;con:details xmlns:con="http://www.bea.com/wli/sb/context">
+  &lt;con1:ReceivedFaultDetail xmlns:con1="http://www.bea.com/wli/sb/stages/transform/config">
+    &lt;con1:faultcode>soapenv:Server&lt;/con1:faultcode>
+    &lt;con1:faultstring>REST Business Service returned HTTP response with status 404&lt;/con1:faultstring>
+    &lt;con1:http-response-code>404&lt;/con1:http-response-code>
+    &lt;con1:response-headers xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="http:HttpResponseHeaders">
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="Access-Control-Allow-Origin" value="*"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amz-apigw-id" value="PjzKqHoPvHcFmqQ="/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Connection" value="keep-alive"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Content-Length" value="0"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Date" value="Fri, 25 Mar 2022 21:21:08 GMT"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-RequestId" value="d7a2a567-c2ee-44d2-8ba1-8d7cc58fd8c0"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="X-Amzn-Trace-Id" value="Root=1-623e3244-4f37e76b75c81c426f2e8559"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="X-Powered-By" value="Express"/>
+      &lt;http:Connection>keep-alive&lt;/http:Connection>
+      &lt;http:Content-Length>0&lt;/http:Content-Length>
+      &lt;http:Content-Type>application/json&lt;/http:Content-Type>
+      &lt;http:Date>Fri, 25 Mar 2022 21:21:08 GMT&lt;/http:Date>
+    &lt;/con1:response-headers>
+  &lt;/con1:ReceivedFaultDetail>
+&lt;/con:details>
+</detail>}"	Scope_NDFSubProcess														"<UDH/>
+"		52849171	25-MAR-22		
+DB1283BD2E476539E0530100007FA100	OSB	NDF_BankingInfoRead_3376_TCS_PS_1.00	3376			NDF	NDF	prd2osb4_server1	25-MAR-22 02.21.08.118000000 PM	43ddeba9-f01f-4459-8917-bdc56da93efa	GVID|SupplierID|BusinessProcessID	1000040913|186281350|209646768	Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404	Permanent	(BLOB)	OSB-382500		<ctx:details xmlns:ctx="http://www.bea.com/wli/sb/context"><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 404</ns0:faultstring><ns0:http-response-code>404</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Access-Control-Allow-Origin" value="*" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amz-apigw-id" value="PjzKqHoPvHcFmqQ=" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Connection" value="keep-alive" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Content-Length" value="0" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Date" value="Fri, 25 Mar 2022 21:21:08 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-RequestId" value="d7a2a567-c2ee-44d2-8ba1-8d7cc58fd8c0" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Amzn-Trace-Id" value="Root=1-623e3244-4f37e76b75c81c426f2e8559" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Powered-By" value="Express" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/json</http:Content-Type><http:Date>Fri, 25 Mar 2022 21:21:08 GMT</http:Date></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details>	stage_GET_BankingInformation														"<UDH/>
+"		52849170	25-MAR-22		
+DB110575F8B2777CE0530100007FF2D3	OSB	AravoAck_IndirectVendor_3422_Sub_PS_1.00	3422			NDF	Aravo	prd2osb4_server1	25-MAR-22 01.00.27.491000000 PM	7a7ea60b-8377-4069-820a-d23cd688e216	GVID|SupplierID|BusinessProcessID|MainFlowID	1000041079|186941371|212794220|618844532	"Error invoking Complete Event Task . Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail:  Details: soapenv:ServerREST Business Service returned HTTP response with status 409409no-cache, no-store, must-revalidatekeep-alive0application/xml; charset=iso-8859-1Fri, 25 Mar 2022 20:00:27 GMTno-cache<cookie-values xmlns="http://www.bea.com/wli/sb/transports/http">
+  <value>rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 20:00:27 GMT</value>
+  <value>JSESSIONID=7FA99728D6845C5FA2905E2112C901AF; Path=/aems; Secure; HttpOnly</value>
+</cookie-values>."	Permanent	(BLOB)	OSB-382500	NA	"<ctx:fault xmlns:ctx="http://www.bea.com/wli/sb/context"><ctx:errorCode>OSB-382500</ctx:errorCode><ctx:reason>OSB Service Callout action received SOAP Fault response</ctx:reason><ctx:details><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 409</ns0:faultstring><ns0:http-response-code>409</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Expires" value="Thu, 24 Mar 2022 20:00:27 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Keep-Alive" value="timeout=20" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Referrer-Policy" value="origin-when-cross-origin" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Content-Type-Options" value="nosniff" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-DEVELOPER-MESSAGE" value="execution(void com.aravo.sim.platform.services.businessprocess.BusinessProcessService.completeWaitTask(Integer))" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-ID" value="ERRID-e0a017983--5bd3aec7-0ec1-4fca-8d01-c8c3fc2cbf96" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-MESSAGE" value="Current task with name &quot;SAP Bank Confirmation&quot; is not configured to complete on IntegrationTaskAutoComplete event" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-FRAME-OPTIONS" value="SAMEORIGIN" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-XSS-Protection" value="1; mode=block" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Cache-Control>no-cache, no-store, must-revalidate</http:Cache-Control><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/xml; charset=iso-8859-1</http:Content-Type><http:Date>Fri, 25 Mar 2022 20:00:27 GMT</http:Date><http:Pragma>no-cache</http:Pragma><http:Set-Cookie>&lt;cookie-values xmlns="http://www.bea.com/wli/sb/transports/http"&gt;
+  &lt;value&gt;rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 20:00:27 GMT&lt;/value&gt;
+  &lt;value&gt;JSESSIONID=7FA99728D6845C5FA2905E2112C901AF; Path=/aems; Secure; HttpOnly&lt;/value&gt;
+&lt;/cookie-values&gt;</http:Set-Cookie></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details><ctx:location><ctx:node>PipeLinePair</ctx:node><ctx:pipeline>PipeLinePair_request</ctx:pipeline><ctx:stage>stage_POST_CompleteTaskEvent</ctx:stage><ctx:path>request-pipeline</ctx:path></ctx:location></ctx:fault>"	stage_POST_CompleteTaskEvent	jms://int-osb4-01-v-prd2:9403,int-osb4-02-v-prd2:9403,int-osb4-03-v-prd2:9403,int-osb4-04-v-prd2:9403/jms.osbXAConnectionFactory/jms.vendorMasterAck_CDM	2	ID:<409586.1648238422049.0>	1648238422049	1648843222203	false	4					2147483647	1	"<UDH>
+<H>
+<K>JMS_BEA_RedeliveryLimit</K>
+<V>2147483647</V>
+</H>
+<H>
+<K>tracking_parentComponentInstanceId</K>
+<V>bpel:1551493980</V>
+</H>
+<H>
+<K>NIC</K>
+<V>2106</V>
+</H>
+<H>
+<K>GVID</K>
+<V>1000041079</V>
+</H>
+<H>
+<K>tracking_execution_context</K>
+<V>1.c1659dd9-bb75-4d67-87e4-52750a671f7c-0023cb14;lcRQs4lhv0YOjITOZSPPi3VRXU8TmHROfPQRbUBGjTOSjJTQoLPIiJSTXURO_PGPt6DCt3CCo5FCm0XLjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP1HDDp1DDn0DEq6DWq6GRjNTI^PKCk0CCEQUCXUHLkMDRAROJBPVPs9TPl9MDk3OKk0ECOITK0_RRmHROgLQBnVPOi4USXJRQdURPi1LTdLRSZPQRbVGS_ITOoPRRiUHOhLPHnHOSGLVScGMSjJPPnJSWZVQSXJOR_UBSjHQBoITOZRPQiNQB3VPRkVRSdKTPJJHG5UOTdKTU9KPDq0CCk2CWZVQSXJOR_UBSjHQBoITOZRPQiNQBHLTQ_JVOdURPJJHG5UOTdKTU9KPDq0CCk7CWMVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrLIT_UOT9KPGo6DDm5CCt5CDq0XPjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP3ITPXKTQjUOLdTPP4HEDo8ECn8CDm2CCo7CWUVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJIS_HOTdVQRKPPR_KHCq4CEm3FDn1ECm8FC0XNRmHROgLQBnVPOi4USXJRQdURPi6GRjNTI^PEDl8CEo4DDn2CWMVQSXJOR_UBSjHQBoITOZRPQiNQBJJHG5UOTdKTU9KPDq0CCl1CWXVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJNG1GLOmKTQoPRRiPGPl2CW3JOTsLKS^HOT_JLSgKCTmLTP</V>
+</H>
+<H>
+<K>BANKINGINFO</K>
+<V>
+<NdfIndirectBankingExportCollection xmlns="http://xmlns.int.nike.com/SupplierBankingInfo">
+<SupplierBankingInfo xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+<id>186941371-206130726</id>
+<bankingInformationCrossReferenceKey>206130726</bankingInformationCrossReferenceKey>
+<bankingInformationIdentifier>1000041079-3001</bankingInformationIdentifier>
+<bankingInformationActiveIndicator>true</bankingInformationActiveIndicator>
+<bankAccountHolderName>Gabrielle Katz</bankAccountHolderName>
+<bankName>Chase Manhattan</bankName>
+<currencyCode>USD</currencyCode>
+<currencyCodeDescription>USD - United States dollar</currencyCodeDescription>
+<bankAccountNumber>759609693</bankAccountNumber>
+<bankCountryCode>US</bankCountryCode>
+<bankCountryDescription>United States of America</bankCountryDescription>
+<sapBankKey>021000021</sapBankKey>
+<bankType>1</bankType>
+<bankAccountType>Chequing</bankAccountType>
+<bankAccountTypeDescription>Chequing (Current)</bankAccountTypeDescription>
+<intermediaryBankRequiredIndicator>false</intermediaryBankRequiredIndicator>
+</SupplierBankingInfo>
+</NdfIndirectBankingExportCollection>
+</V>
+</H>
+<H>
+<K>ACCOUNTGROUP</K>
+<V>Indirect Trade</V>
+</H>
+<H>
+<K>tracking_compositeInstanceId</K>
+<V>619304532</V>
+</H>
+<H>
+<K>VENDORRELATIONSHIP</K>
+<V>
+<supplier xmlns="http://xmlns.int.nike.com/IndirectSupplier"/>
+</V>
+</H>
+<H>
+<K>SUPLRID</K>
+<V>186941371</V>
+</H>
+<H>
+<K>BPID</K>
+<V>212794220</V>
+</H>
+<H>
+<K>tracking_conversationId</K>
+<V>urn:34047af1-ac76-11ec-8731-02e3815e1116</V>
+</H>
+<H>
+<K>tracking_ecid</K>
+<V>c1659dd9-bb75-4d67-87e4-52750a671f7c-0023c618</V>
+</H>
+</UDH>
+"	<StaticFields xmlns="http://www.nike.com/StaticVariables"><PlatformName>Fusion</PlatformName><ServiceName>GEM_NDF_SupplierReadIndirect_3374_SCS_PS_1.00</ServiceName><LinkID/><TrackID>7a7ea60b-8377-4069-820a-d23cd688e216</TrackID><BKeyName>GVID|SupplierID|BusinessProcessID|MainFlowID</BKeyName><BKeyText>1000041079|186941371|212794220|618844532</BKeyText><SendingApplicationText>NDF</SendingApplicationText><TargetApplicationText>NDF</TargetApplicationText><SenderText>NDFSubProcess</SenderText><FileName>NA</FileName></StaticFields>	52847793	25-MAR-22		
+DB1073E584B72A1EE0530100007F8563	OSB	AravoAck_IndirectVendor_3422_Sub_PS_1.00	3422			NDF	Aravo	prd2osb4_server3	25-MAR-22 12.20.16.642000000 PM	470deac9-a455-474c-92dd-38d9dae0fb0e	GVID|SupplierID|BusinessProcessID|MainFlowID	1000040904|186183208|210154065|618825918	"Error invoking Complete Event Task . Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail:  Details: soapenv:ServerREST Business Service returned HTTP response with status 409409no-cache, no-store, must-revalidatekeep-alive0application/xml; charset=iso-8859-1Fri, 25 Mar 2022 19:20:16 GMTno-cache<cookie-values xmlns="http://www.bea.com/wli/sb/transports/http">
+  <value>rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 19:20:16 GMT</value>
+  <value>JSESSIONID=E4D6B2F5925F6E02864AD2CB9200F3E1; Path=/aems; Secure; HttpOnly</value>
+</cookie-values>."	Permanent	(BLOB)	OSB-382500	NA	"<ctx:fault xmlns:ctx="http://www.bea.com/wli/sb/context"><ctx:errorCode>OSB-382500</ctx:errorCode><ctx:reason>OSB Service Callout action received SOAP Fault response</ctx:reason><ctx:details><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 409</ns0:faultstring><ns0:http-response-code>409</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Expires" value="Thu, 24 Mar 2022 19:20:16 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Keep-Alive" value="timeout=20" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Referrer-Policy" value="origin-when-cross-origin" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Content-Type-Options" value="nosniff" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-DEVELOPER-MESSAGE" value="execution(void com.aravo.sim.platform.services.businessprocess.BusinessProcessService.completeWaitTask(Integer))" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-ID" value="ERRID-97a594135--414b3885-dee4-433b-86de-37366831c82e" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-MESSAGE" value="Current task with name &quot;SAP Bank Confirmation&quot; is not configured to complete on IntegrationTaskAutoComplete event" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-FRAME-OPTIONS" value="SAMEORIGIN" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-XSS-Protection" value="1; mode=block" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Cache-Control>no-cache, no-store, must-revalidate</http:Cache-Control><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/xml; charset=iso-8859-1</http:Content-Type><http:Date>Fri, 25 Mar 2022 19:20:16 GMT</http:Date><http:Pragma>no-cache</http:Pragma><http:Set-Cookie>&lt;cookie-values xmlns="http://www.bea.com/wli/sb/transports/http"&gt;
+  &lt;value&gt;rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 19:20:16 GMT&lt;/value&gt;
+  &lt;value&gt;JSESSIONID=E4D6B2F5925F6E02864AD2CB9200F3E1; Path=/aems; Secure; HttpOnly&lt;/value&gt;
+&lt;/cookie-values&gt;</http:Set-Cookie></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details><ctx:location><ctx:node>PipeLinePair</ctx:node><ctx:pipeline>PipeLinePair_request</ctx:pipeline><ctx:stage>stage_POST_CompleteTaskEvent</ctx:stage><ctx:path>request-pipeline</ctx:path></ctx:location></ctx:fault>"	stage_POST_CompleteTaskEvent	jms://int-osb4-01-v-prd2:9403,int-osb4-02-v-prd2:9403,int-osb4-03-v-prd2:9403,int-osb4-04-v-prd2:9403/jms.osbXAConnectionFactory/jms.vendorMasterAck_CDM	2	ID:<409586.1648236010408.0>	1648236010408	1648840810593	false	4					2147483647	1	"<UDH>
+<H>
+<K>JMS_BEA_RedeliveryLimit</K>
+<V>2147483647</V>
+</H>
+<H>
+<K>tracking_parentComponentInstanceId</K>
+<V>bpel:1551429297</V>
+</H>
+<H>
+<K>NIC</K>
+<V>8100</V>
+</H>
+<H>
+<K>GVID</K>
+<V>1000040904</V>
+</H>
+<H>
+<K>tracking_execution_context</K>
+<V>1.ce51252f-a5cd-4c4e-a49b-049776d9b14a-0023dca2;lcRP5Pphv0YOjITOZSPPi3VRXU8TmHROfPQRbUBGjTOSjJTQoLPIiJSTXURO_PGPt6DCt2CEp9DCs0XLjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP1HDDp1CDq5DEo2DWq6GRjNTI^PKCk0CCEQUCKPCImLECeROJBPSPt9PPl9MDk7KTk0ECaJTM0_RRmHROgLQBnVPOi4USXJRQdURPi1LTdLRSZPQRbVGS_ITOoPRRiUHOhLPHnHOSGLVScGMSjJPPnJSWZVQSXJOR_UBSjHQBoITOZRPQiNQB3VPRkVRSdKTPJJHG5UOTdKTU9KPDq0CCk2CWZVQSXJOR_UBSjHQBoITOZRPQiNQBHLTQ_JVOdURPJJHG5UOTdKTU9KPDq0CCk7CWMVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrLIT_UOT9KPGo6DDm3CDn5DCm0XPjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP3ITPXKTQjUOLdTPP4HEDo8ECn6CCl0CDk6CWUVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJIS_HOTdVQRKPPR_KHCq4CEm3CDs9CDs1CD0XNRmHROgLQBnVPOi4USXJRQdURPi6GRjNTI^PEDl8CEm5DEl8CWMVQSXJOR_UBSjHQBoITOZRPQiNQBJJHG5UOTdKTU9KPDq0CCl1CWXVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJNG1GLOmKTQoPRRiPGPl2CW3JOTsLKS^HOT_JLSgKCTmLTP</V>
+</H>
+<H>
+<K>BANKINGINFO</K>
+<V>
+<NdfIndirectBankingExportCollection xmlns="http://xmlns.int.nike.com/SupplierBankingInfo">
+<SupplierBankingInfo xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+<id>186183208-202418979</id>
+<bankingInformationCrossReferenceKey>202418979</bankingInformationCrossReferenceKey>
+<bankingInformationIdentifier>1000040904-3001</bankingInformationIdentifier>
+<bankingInformationActiveIndicator>true</bankingInformationActiveIndicator>
+<bankAccountHolderName>Wittern Financial</bankAccountHolderName>
+<swiftBicCode>BTCDUS44</swiftBicCode>
+<bankName>Bankers Trust</bankName>
+<currencyCode>USD</currencyCode>
+<currencyCodeDescription>USD - United States dollar</currencyCodeDescription>
+<bankAccountNumber>78638</bankAccountNumber>
+<bankAddress>665 Locust St</bankAddress>
+<bankCity>Des Moines</bankCity>
+<bankCountryCode>US</bankCountryCode>
+<bankCountryDescription>United States of America</bankCountryDescription>
+<sapBankKey>073000642</sapBankKey>
+<bankType>1</bankType>
+<intermediaryBankRequiredIndicator>false</intermediaryBankRequiredIndicator>
+</SupplierBankingInfo>
+</NdfIndirectBankingExportCollection>
+</V>
+</H>
+<H>
+<K>ACCOUNTGROUP</K>
+<V>Indirect Trade</V>
+</H>
+<H>
+<K>tracking_compositeInstanceId</K>
+<V>619285918</V>
+</H>
+<H>
+<K>VENDORRELATIONSHIP</K>
+<V>
+<supplier xmlns="http://xmlns.int.nike.com/IndirectSupplier"/>
+</V>
+</H>
+<H>
+<K>SUPLRID</K>
+<V>186183208</V>
+</H>
+<H>
+<K>BPID</K>
+<V>210154065</V>
+</H>
+<H>
+<K>tracking_conversationId</K>
+<V>urn:969144f6-ac70-11ec-8731-02e3815e1116</V>
+</H>
+<H>
+<K>tracking_ecid</K>
+<V>6359550b-5050-448a-b57c-daab1e3767e1-00246003</V>
+</H>
+</UDH>
+"	<StaticFields xmlns="http://www.nike.com/StaticVariables"><PlatformName>Fusion</PlatformName><ServiceName>GEM_NDF_SupplierReadIndirect_3374_SCS_PS_1.00</ServiceName><LinkID/><TrackID>470deac9-a455-474c-92dd-38d9dae0fb0e</TrackID><BKeyName>GVID|SupplierID|BusinessProcessID|MainFlowID</BKeyName><BKeyText>1000040904|186183208|210154065|618825918</BKeyText><SendingApplicationText>NDF</SendingApplicationText><TargetApplicationText>NDF</TargetApplicationText><SenderText>NDFSubProcess</SenderText><FileName>NA</FileName></StaticFields>	52846725	25-MAR-22		
+DB10DA3FCBB34851E0530100007F4CED	OSB	AravoAck_IndirectVendor_3422_Sub_PS_1.00	3422			NDF	Aravo	prd2osb4_server1	25-MAR-22 12.20.16.114000000 PM	5766035c-a587-4795-ba6c-b314bb91513f	GVID|SupplierID|BusinessProcessID|MainFlowID	1000041233|188023215|215533937|618831016	"Error invoking Complete Event Task . Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail:  Details: soapenv:ServerREST Business Service returned HTTP response with status 409409no-cache, no-store, must-revalidatekeep-alive0application/xml; charset=iso-8859-1Fri, 25 Mar 2022 19:20:16 GMTno-cache<cookie-values xmlns="http://www.bea.com/wli/sb/transports/http">
+  <value>rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 19:20:16 GMT</value>
+  <value>JSESSIONID=497C6F5E35DE97CBF937E9FC22F1765F; Path=/aems; Secure; HttpOnly</value>
+</cookie-values>."	Permanent	(BLOB)	OSB-382500	NA	"<ctx:fault xmlns:ctx="http://www.bea.com/wli/sb/context"><ctx:errorCode>OSB-382500</ctx:errorCode><ctx:reason>OSB Service Callout action received SOAP Fault response</ctx:reason><ctx:details><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 409</ns0:faultstring><ns0:http-response-code>409</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Expires" value="Thu, 24 Mar 2022 19:20:16 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Keep-Alive" value="timeout=20" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Referrer-Policy" value="origin-when-cross-origin" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Content-Type-Options" value="nosniff" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-DEVELOPER-MESSAGE" value="execution(void com.aravo.sim.platform.services.businessprocess.BusinessProcessService.completeWaitTask(Integer))" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-ID" value="ERRID-131456fa8--4860407a-b74f-499d-89ca-a3ba23a5c6bb" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-MESSAGE" value="Current task with name &quot;SAP Bank Confirmation&quot; is not configured to complete on IntegrationTaskAutoComplete event" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-FRAME-OPTIONS" value="SAMEORIGIN" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-XSS-Protection" value="1; mode=block" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Cache-Control>no-cache, no-store, must-revalidate</http:Cache-Control><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/xml; charset=iso-8859-1</http:Content-Type><http:Date>Fri, 25 Mar 2022 19:20:16 GMT</http:Date><http:Pragma>no-cache</http:Pragma><http:Set-Cookie>&lt;cookie-values xmlns="http://www.bea.com/wli/sb/transports/http"&gt;
+  &lt;value&gt;rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 19:20:16 GMT&lt;/value&gt;
+  &lt;value&gt;JSESSIONID=497C6F5E35DE97CBF937E9FC22F1765F; Path=/aems; Secure; HttpOnly&lt;/value&gt;
+&lt;/cookie-values&gt;</http:Set-Cookie></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details><ctx:location><ctx:node>PipeLinePair</ctx:node><ctx:pipeline>PipeLinePair_request</ctx:pipeline><ctx:stage>stage_POST_CompleteTaskEvent</ctx:stage><ctx:path>request-pipeline</ctx:path></ctx:location></ctx:fault>"	stage_POST_CompleteTaskEvent	jms://int-osb4-01-v-prd2:9403,int-osb4-02-v-prd2:9403,int-osb4-03-v-prd2:9403,int-osb4-04-v-prd2:9403/jms.osbXAConnectionFactory/jms.vendorMasterAck_CDM	2	ID:<294841.1648236009318.0>	1648236009318	1648840809454	false	4					2147483647	1	"<UDH>
+<H>
+<K>JMS_BEA_RedeliveryLimit</K>
+<V>2147483647</V>
+</H>
+<H>
+<K>tracking_parentComponentInstanceId</K>
+<V>bpel:1551445539</V>
+</H>
+<H>
+<K>NIC</K>
+<V>4201</V>
+</H>
+<H>
+<K>GVID</K>
+<V>1000041233</V>
+</H>
+<H>
+<K>tracking_execution_context</K>
+<V>1.ce51252f-a5cd-4c4e-a49b-049776d9b14a-0023dc9e;l^LEmOthv0YOjITOZSPPi3VRXU8TmHROfPQRbUBGjTOSjJTQoLPIiJSTXURO_PGPt6DCt2DEl0DCq0XLjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP1HDDp1CDs1FCs7DWq6GRjNTI^PKCk0CCEQUCKPFJoLECeROJBPSPt9PPl9MDk7KTk0ECaJUM0_RRmHROgLQBnVPOi4USXJRQdURPi1LTdLRSZPQRbVGS_ITOoPRRiUHOhLPHnHOSGLVScGMSjJPPnJSWZVQSXJOR_UBSjHQBoITOZRPQiNQB3VPRkVRSdKTPJJHG5UOTdKTU9KPDq0CCk2CWZVQSXJOR_UBSjHQBoITOZRPQiNQBHLTQ_JVOdURPJJHG5UOTdKTU9KPDq0CCk7CWMVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrLIT_UOT9KPGo6DDm3DDl7EDl0XPjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP3ITPXKTQjUOLdTPP4HEDo8ECn6CCk9FCl7CWUVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJIS_HOTdVQRKPPR_KHCq4CEm3CDs9DDk0FC0XNRmHROgLQBnVPOi4USXJRQdURPi6GRjNTI^PEDl8CEn1CCl6CWMVQSXJOR_UBSjHQBoITOZRPQiNQBJJHG5UOTdKTU9KPDq0CCl1CWXVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJNG1GLOmKTQoPRRiPGPl2CW3JOTsLKS^HOT_JLSgKCTmLTP</V>
+</H>
+<H>
+<K>BANKINGINFO</K>
+<V>
+<NdfIndirectBankingExportCollection xmlns="http://xmlns.int.nike.com/SupplierBankingInfo">
+<SupplierBankingInfo xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+<id>188023215-208992710</id>
+<bankingInformationCrossReferenceKey>208992710</bankingInformationCrossReferenceKey>
+<bankingInformationIdentifier>1000041233-3001</bankingInformationIdentifier>
+<bankingInformationActiveIndicator>true</bankingInformationActiveIndicator>
+<bankAccountHolderName>Tijs Van Impe</bankAccountHolderName>
+<swiftBicCode>GEBABEBB</swiftBicCode>
+<bankName>BNP Paribas Fortis</bankName>
+<currencyCode>EUR</currencyCode>
+<currencyCodeDescription>EUR - Euro</currencyCodeDescription>
+<bankAccountNumber>001-9110359-01</bankAccountNumber>
+<bankCountryCode>BE</bankCountryCode>
+<bankCountryDescription>Belgium</bankCountryDescription>
+<sapBankKey>001</sapBankKey>
+<bankType>1</bankType>
+<ibanCode>BE43001911035901</ibanCode>
+<intermediaryBankRequiredIndicator>false</intermediaryBankRequiredIndicator>
+</SupplierBankingInfo>
+</NdfIndirectBankingExportCollection>
+</V>
+</H>
+<H>
+<K>ACCOUNTGROUP</K>
+<V>Indirect Trade</V>
+</H>
+<H>
+<K>tracking_compositeInstanceId</K>
+<V>619291016</V>
+</H>
+<H>
+<K>VENDORRELATIONSHIP</K>
+<V>
+<supplier xmlns="http://xmlns.int.nike.com/IndirectSupplier"/>
+</V>
+</H>
+<H>
+<K>SUPLRID</K>
+<V>188023215</V>
+</H>
+<H>
+<K>BPID</K>
+<V>215533937</V>
+</H>
+<H>
+<K>tracking_conversationId</K>
+<V>urn:95eb19b7-ac70-11ec-a8eb-0a3f73b41dd0</V>
+</H>
+<H>
+<K>tracking_ecid</K>
+<V>6359550b-5050-448a-b57c-daab1e3767e1-00246005</V>
+</H>
+</UDH>
+"	<StaticFields xmlns="http://www.nike.com/StaticVariables"><PlatformName>Fusion</PlatformName><ServiceName>GEM_NDF_SupplierReadIndirect_3374_SCS_PS_1.00</ServiceName><LinkID/><TrackID>5766035c-a587-4795-ba6c-b314bb91513f</TrackID><BKeyName>GVID|SupplierID|BusinessProcessID|MainFlowID</BKeyName><BKeyText>1000041233|188023215|215533937|618831016</BKeyText><SendingApplicationText>NDF</SendingApplicationText><TargetApplicationText>NDF</TargetApplicationText><SenderText>NDFSubProcess</SenderText><FileName>NA</FileName></StaticFields>	52846724	25-MAR-22		
+DB0F7AE0A5771A9FE0530100007F5D20	OSB	AravoAck_IndirectVendor_3422_Sub_PS_1.00	3422			NDF	Aravo	prd2osb4_server3	25-MAR-22 11.02.07.237000000 AM	15ae17cb-fe02-40da-b5f3-08bbc29caed3	GVID|SupplierID|BusinessProcessID|MainFlowID	1000040465|183781847|202453994|618800715	"Error invoking Complete Event Task . Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail:  Details: soapenv:ServerREST Business Service returned HTTP response with status 409409no-cache, no-store, must-revalidatekeep-alive0application/xml; charset=iso-8859-1Fri, 25 Mar 2022 18:02:07 GMTno-cache<cookie-values xmlns="http://www.bea.com/wli/sb/transports/http">
+  <value>rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 18:02:07 GMT</value>
+  <value>JSESSIONID=D0C28B758B27AAA84F9BCCB3B37D8FB4; Path=/aems; Secure; HttpOnly</value>
+</cookie-values>."	Permanent	(BLOB)	OSB-382500	NA	"<ctx:fault xmlns:ctx="http://www.bea.com/wli/sb/context"><ctx:errorCode>OSB-382500</ctx:errorCode><ctx:reason>OSB Service Callout action received SOAP Fault response</ctx:reason><ctx:details><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 409</ns0:faultstring><ns0:http-response-code>409</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Expires" value="Thu, 24 Mar 2022 18:02:07 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Keep-Alive" value="timeout=20" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Referrer-Policy" value="origin-when-cross-origin" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Content-Type-Options" value="nosniff" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-DEVELOPER-MESSAGE" value="execution(void com.aravo.sim.platform.services.businessprocess.BusinessProcessService.completeWaitTask(Integer))" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-ID" value="ERRID-131456fa8--a938d328-4cd9-4dc5-b6a5-1bb22b3a5c77" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-MESSAGE" value="Current task with name &quot;SAP Bank Confirmation&quot; is not configured to complete on IntegrationTaskAutoComplete event" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-FRAME-OPTIONS" value="SAMEORIGIN" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-XSS-Protection" value="1; mode=block" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Cache-Control>no-cache, no-store, must-revalidate</http:Cache-Control><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/xml; charset=iso-8859-1</http:Content-Type><http:Date>Fri, 25 Mar 2022 18:02:07 GMT</http:Date><http:Pragma>no-cache</http:Pragma><http:Set-Cookie>&lt;cookie-values xmlns="http://www.bea.com/wli/sb/transports/http"&gt;
+  &lt;value&gt;rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 18:02:07 GMT&lt;/value&gt;
+  &lt;value&gt;JSESSIONID=D0C28B758B27AAA84F9BCCB3B37D8FB4; Path=/aems; Secure; HttpOnly&lt;/value&gt;
+&lt;/cookie-values&gt;</http:Set-Cookie></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details><ctx:location><ctx:node>PipeLinePair</ctx:node><ctx:pipeline>PipeLinePair_request</ctx:pipeline><ctx:stage>stage_POST_CompleteTaskEvent</ctx:stage><ctx:path>request-pipeline</ctx:path></ctx:location></ctx:fault>"	stage_POST_CompleteTaskEvent	jms://int-osb4-01-v-prd2:9403,int-osb4-02-v-prd2:9403,int-osb4-03-v-prd2:9403,int-osb4-04-v-prd2:9403/jms.osbXAConnectionFactory/jms.vendorMasterAck_CDM	2	ID:<409586.1648231326074.0>	1648231326074	1648836126206	false	4					2147483647	1	"<UDH>
+<H>
+<K>JMS_BEA_RedeliveryLimit</K>
+<V>2147483647</V>
+</H>
+<H>
+<K>tracking_parentComponentInstanceId</K>
+<V>bpel:1551338757</V>
+</H>
+<H>
+<K>NIC</K>
+<V>5030</V>
+</H>
+<H>
+<K>GVID</K>
+<V>1000040465</V>
+</H>
+<H>
+<K>tracking_execution_context</K>
+<V>1.338416c6-1eb8-4e7e-ba36-146b2db35231-0000e267;lcRNBIlhv0YOjITOZSPPi3VRXU8TmHROfPQRbUBGjTOSjJTQoLPIiJSTXURO_PGPt6DCt2EDk7DCp0XLjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP1HDDp1FCp9ECk4DWq6GRjNTI^PKCk0CCEQUC2OJQAMDRAROJBPVPs9TPl9MDk3OKk0ECOVOR0_RRmHROgLQBnVPOi4USXJRQdURPi1LTdLRSZPQRbVGS_ITOoPRRiUHOhLPHnHOSGLVScGMSjJPPnJSWZVQSXJOR_UBSjHQBoITOZRPQiNQB3VPRkVRSdKTPJJHG5UOTdKTU9KPDq0CCk2CWZVQSXJOR_UBSjHQBoITOZRPQiNQBHLTQ_JVOdURPJJHG5UOTdKTU9KPDq0CCk7CWMVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrLIT_UOT9KPGo6DDm0EDl6ECp0XPjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP3ITPXKTQjUOLdTPP4HEDo8ECn1FCm6CCr2CWUVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJIS_HOTdVQRKPPR_KHCq4CEm3CCm1CCt3CC0XNRmHROgLQBnVPOi4USXJRQdURPi6GRjNTI^PEDl8CEk0FDl5CWMVQSXJOR_UBSjHQBoITOZRPQiNQBJJHG5UOTdKTU9KPDq0CCl1CWXVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJNG1GLOmKTQoPRRiPGPl2CW3JOTsLKS^HOT_JLSgKCTmLTP</V>
+</H>
+<H>
+<K>BANKINGINFO</K>
+<V>
+<NdfIndirectBankingExportCollection xmlns="http://xmlns.int.nike.com/SupplierBankingInfo">
+<SupplierBankingInfo xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+<id>183781847-195512448</id>
+<bankingInformationCrossReferenceKey>195512448</bankingInformationCrossReferenceKey>
+<bankingInformationIdentifier>1000040465-3001</bankingInformationIdentifier>
+<bankingInformationActiveIndicator>true</bankingInformationActiveIndicator>
+<bankAccountHolderName>Ruther C. Lola/Design 23 Creative Studio</bankAccountHolderName>
+<swiftBicCode>BOPIPHMM</swiftBicCode>
+<bankName>BPI - Bank of the Philippine Island </bankName>
+<currencyCode>PHP</currencyCode>
+<currencyCodeDescription>PHP - Philippine peso</currencyCodeDescription>
+<bankAccountNumber>3329006696</bankAccountNumber>
+<bankAddress>Kamias Road, Brgy. Sikatuna Village Q.C.</bankAddress>
+<bankCity>Quezon City</bankCity>
+<bankCountryCode>PH</bankCountryCode>
+<bankCountryDescription>Philippines</bankCountryDescription>
+<bankBranchCode>137 Kamias Road</bankBranchCode>
+<sapBankKey>BOPIPHMM</sapBankKey>
+<bankType>1</bankType>
+<intermediaryBankRequiredIndicator>false</intermediaryBankRequiredIndicator>
+</SupplierBankingInfo>
+</NdfIndirectBankingExportCollection>
+</V>
+</H>
+<H>
+<K>ACCOUNTGROUP</K>
+<V>Indirect Trade</V>
+</H>
+<H>
+<K>tracking_compositeInstanceId</K>
+<V>619260715</V>
+</H>
+<H>
+<K>VENDORRELATIONSHIP</K>
+<V>
+<supplier xmlns="http://xmlns.int.nike.com/IndirectSupplier"/>
+</V>
+</H>
+<H>
+<K>SUPLRID</K>
+<V>183781847</V>
+</H>
+<H>
+<K>BPID</K>
+<V>202453994</V>
+</H>
+<H>
+<K>tracking_conversationId</K>
+<V>urn:ae7c9fbf-ac65-11ec-8731-02e3815e1116</V>
+</H>
+<H>
+<K>tracking_ecid</K>
+<V>c1659dd9-bb75-4d67-87e4-52750a671f7c-0023b296</V>
+</H>
+</UDH>
+"	<StaticFields xmlns="http://www.nike.com/StaticVariables"><PlatformName>Fusion</PlatformName><ServiceName>GEM_NDF_SupplierReadIndirect_3374_SCS_PS_1.00</ServiceName><LinkID/><TrackID>15ae17cb-fe02-40da-b5f3-08bbc29caed3</TrackID><BKeyName>GVID|SupplierID|BusinessProcessID|MainFlowID</BKeyName><BKeyText>1000040465|183781847|202453994|618800715</BKeyText><SendingApplicationText>NDF</SendingApplicationText><TargetApplicationText>NDF</TargetApplicationText><SenderText>NDFSubProcess</SenderText><FileName>NA</FileName></StaticFields>	52844610	25-MAR-22		
+DB0E015E80B03EDDE0530100007F5B21	OSB	AravoAck_IndirectVendor_3422_Sub_PS_1.00	3422			NDF	Aravo	prd2osb4_server4	25-MAR-22 09.20.19.197000000 AM	3592dac3-4b79-4813-bfd8-72e1eda1c798	GVID|SupplierID|BusinessProcessID|MainFlowID	1000040458|183741399|202235552|618728563	"Error invoking Complete Event Task . Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail:  Details: soapenv:ServerREST Business Service returned HTTP response with status 409409no-cache, no-store, must-revalidatekeep-alive0application/xml; charset=iso-8859-1Fri, 25 Mar 2022 16:20:19 GMTno-cache<cookie-values xmlns="http://www.bea.com/wli/sb/transports/http">
+  <value>rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 16:20:19 GMT</value>
+  <value>JSESSIONID=1C68432DECC444CA3BD4D4C851438192; Path=/aems; Secure; HttpOnly</value>
+</cookie-values>."	Permanent	(BLOB)	OSB-382500	NA	"<ctx:fault xmlns:ctx="http://www.bea.com/wli/sb/context"><ctx:errorCode>OSB-382500</ctx:errorCode><ctx:reason>OSB Service Callout action received SOAP Fault response</ctx:reason><ctx:details><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 409</ns0:faultstring><ns0:http-response-code>409</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Expires" value="Thu, 24 Mar 2022 16:20:19 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Keep-Alive" value="timeout=20" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Referrer-Policy" value="origin-when-cross-origin" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Content-Type-Options" value="nosniff" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-DEVELOPER-MESSAGE" value="execution(void com.aravo.sim.platform.services.businessprocess.BusinessProcessService.completeWaitTask(Integer))" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-ID" value="ERRID-97a594135--0e630ea5-10b6-4067-bb03-dd3fc53043aa" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-MESSAGE" value="Current task with name &quot;SAP Bank Confirmation&quot; is not configured to complete on IntegrationTaskAutoComplete event" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-FRAME-OPTIONS" value="SAMEORIGIN" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-XSS-Protection" value="1; mode=block" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Cache-Control>no-cache, no-store, must-revalidate</http:Cache-Control><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/xml; charset=iso-8859-1</http:Content-Type><http:Date>Fri, 25 Mar 2022 16:20:19 GMT</http:Date><http:Pragma>no-cache</http:Pragma><http:Set-Cookie>&lt;cookie-values xmlns="http://www.bea.com/wli/sb/transports/http"&gt;
+  &lt;value&gt;rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 16:20:19 GMT&lt;/value&gt;
+  &lt;value&gt;JSESSIONID=1C68432DECC444CA3BD4D4C851438192; Path=/aems; Secure; HttpOnly&lt;/value&gt;
+&lt;/cookie-values&gt;</http:Set-Cookie></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details><ctx:location><ctx:node>PipeLinePair</ctx:node><ctx:pipeline>PipeLinePair_request</ctx:pipeline><ctx:stage>stage_POST_CompleteTaskEvent</ctx:stage><ctx:path>request-pipeline</ctx:path></ctx:location></ctx:fault>"	stage_POST_CompleteTaskEvent	jms://int-osb4-01-v-prd2:9403,int-osb4-02-v-prd2:9403,int-osb4-03-v-prd2:9403,int-osb4-04-v-prd2:9403/jms.osbXAConnectionFactory/jms.vendorMasterAck_CDM	2	ID:<335701.1648225214038.0>	1648225214038	1648830014175	false	4					2147483647	1	"<UDH>
+<H>
+<K>JMS_BEA_RedeliveryLimit</K>
+<V>2147483647</V>
+</H>
+<H>
+<K>tracking_parentComponentInstanceId</K>
+<V>bpel:1551197744</V>
+</H>
+<H>
+<K>NIC</K>
+<V>2108</V>
+</H>
+<H>
+<K>GVID</K>
+<V>1000040458</V>
+</H>
+<H>
+<K>tracking_execution_context</K>
+<V>1.59d7bfc9-2907-4016-ae5f-f15dd8bb5bd3-0024018b;lcQLhMlhv0YOjITOZSPPi3VRXU8TmHROfPQRbUBGjTOSjJTQoLPIiJSTXURO_PGPt6DCt1CEs5EDn0XLjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP1HDDp1ECp0CEt8DWq6GRjNTI^PKCk0CCEQTCiPTJ5MDRAROJBPVPs9TPl9MDk3OKk0ECOHPS0_RRmHROgLQBnVPOi4USXJRQdURPi1LTdLRSZPQRbVGS_ITOoPRRiUHOhLPHnHOSGLVScGMSjJPPnJSWZVQSXJOR_UBSjHQBoITOZRPQiNQB3VPRkVRSdKTPJJHG5UOTdKTU9KPDq0CCk2CWZVQSXJOR_UBSjHQBoITOZRPQiNQBHLTQ_JVOdURPJJHG5UOTdKTU9KPDq0CCk7CWMVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrLIT_UOT9KPGo6DDl6FDk3EDr0XPjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP3ITPXKTQjUOLdTPP4HEDo8ECm5ECl4CCn7CWUVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJIS_HOTdVQRKPPR_KHCq4CEm2CDl0ECl6DC0XNRmHROgLQBnVPOi4USXJRQdURPi6GRjNTI^PEDl8FDm8DDq3CWMVQSXJOR_UBSjHQBoITOZRPQiNQBJJHG5UOTdKTU9KPDq0CCl1CWXVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJNG1GLOmKTQoPRRiPGPl2CW3JOTsLKS^HOT_JLSgKCTmLTP</V>
+</H>
+<H>
+<K>BANKINGINFO</K>
+<V>
+<NdfIndirectBankingExportCollection xmlns="http://xmlns.int.nike.com/SupplierBankingInfo">
+<SupplierBankingInfo xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+<id>183741399-195834522</id>
+<bankingInformationCrossReferenceKey>195834522</bankingInformationCrossReferenceKey>
+<bankingInformationIdentifier>1000040458-3001</bankingInformationIdentifier>
+<bankingInformationActiveIndicator>true</bankingInformationActiveIndicator>
+<bankAccountHolderName>PAUSE Online Ltd</bankAccountHolderName>
+<swiftBicCode>BUKBGB22</swiftBicCode>
+<bankName>Barclays</bankName>
+<currencyCode>USD</currencyCode>
+<currencyCodeDescription>USD - United States dollar</currencyCodeDescription>
+<bankAccountNumber>56921288</bankAccountNumber>
+<bankAddress>25 The Parade Oadby Leicester LE2 5BB</bankAddress>
+<bankCity>London</bankCity>
+<bankCountryCode>GB</bankCountryCode>
+<bankCountryDescription>United Kingdom of Great Britain and Northern Ireland</bankCountryDescription>
+<sapBankKey>203593</sapBankKey>
+<bankType>1</bankType>
+<ibanCode>GB63BUKB20359356921288</ibanCode>
+<intermediaryBankRequiredIndicator>false</intermediaryBankRequiredIndicator>
+</SupplierBankingInfo>
+</NdfIndirectBankingExportCollection>
+</V>
+</H>
+<H>
+<K>ACCOUNTGROUP</K>
+<V>Indirect Trade</V>
+</H>
+<H>
+<K>tracking_compositeInstanceId</K>
+<V>619188563</V>
+</H>
+<H>
+<K>VENDORRELATIONSHIP</K>
+<V>
+<supplier xmlns="http://xmlns.int.nike.com/IndirectSupplier"/>
+</V>
+</H>
+<H>
+<K>SUPLRID</K>
+<V>183741399</V>
+</H>
+<H>
+<K>BPID</K>
+<V>202235552</V>
+</H>
+<H>
+<K>tracking_conversationId</K>
+<V>urn:736e18bf-ac57-11ec-94c4-0a68873c4726</V>
+</H>
+<H>
+<K>tracking_ecid</K>
+<V>c1659dd9-bb75-4d67-87e4-52750a671f7c-0023a028</V>
+</H>
+</UDH>
+"	<StaticFields xmlns="http://www.nike.com/StaticVariables"><PlatformName>Fusion</PlatformName><ServiceName>GEM_NDF_SupplierReadIndirect_3374_SCS_PS_1.00</ServiceName><LinkID/><TrackID>3592dac3-4b79-4813-bfd8-72e1eda1c798</TrackID><BKeyName>GVID|SupplierID|BusinessProcessID|MainFlowID</BKeyName><BKeyText>1000040458|183741399|202235552|618728563</BKeyText><SendingApplicationText>NDF</SendingApplicationText><TargetApplicationText>NDF</TargetApplicationText><SenderText>NDFSubProcess</SenderText><FileName>NA</FileName></StaticFields>	52841803	25-MAR-22		
+DB0AB2C73C303A34E0530100007FC713	Fusion	NDF_VendorMaster_3375_SubProcess	3375		NDFSubProcess	NDF	NDF	prd2soa1_server4	25-MAR-22 05.48.46.024000000 AM	d71553dd-c340-4d10-83c0-66ea1471b0a5	GVID|SupplierID|BusinessProcessID|MainFlowID	1000041219|187901335|215113902|618710677	Failed to process. ScopeName : Scope_NDFSubProcess,FaultName : remoteFault, FaultMessage : Error occured in service  due to Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404	Permanent	(BLOB)	remoteFault	NA	"com.oracle.bpel.client.BPELFault: faultName: {{http://schemas.oracle.com/bpel/extension}remoteFault}
+messageType: {{http://schemas.oracle.com/bpel/extension}RuntimeFaultMessage}
+parts: {{
+summary=<summary>Error occured in service  due to Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404</summary>
+,code=<code>OSB-382500</code>
+,detail=<detail>&lt;con:details xmlns:con="http://www.bea.com/wli/sb/context">
+  &lt;con1:ReceivedFaultDetail xmlns:con1="http://www.bea.com/wli/sb/stages/transform/config">
+    &lt;con1:faultcode>soapenv:Server&lt;/con1:faultcode>
+    &lt;con1:faultstring>REST Business Service returned HTTP response with status 404&lt;/con1:faultstring>
+    &lt;con1:http-response-code>404&lt;/con1:http-response-code>
+    &lt;con1:response-headers xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="http:HttpResponseHeaders">
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="Access-Control-Allow-Origin" value="*"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amz-apigw-id" value="PioHNGmWPHcF7RQ="/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Connection" value="keep-alive"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Content-Length" value="0"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-Remapped-Date" value="Fri, 25 Mar 2022 12:48:45 GMT"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="x-amzn-RequestId" value="3ac3a27e-cab4-40b6-b9fe-a0eae1d00d0e"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="X-Amzn-Trace-Id" value="Root=1-623dba2d-5b26d139631dc82f5f955f33"/>
+      &lt;tran:user-header xmlns:tran="http://www.bea.com/wli/sb/transports" name="X-Powered-By" value="Express"/>
+      &lt;http:Connection>keep-alive&lt;/http:Connection>
+      &lt;http:Content-Length>0&lt;/http:Content-Length>
+      &lt;http:Content-Type>application/json&lt;/http:Content-Type>
+      &lt;http:Date>Fri, 25 Mar 2022 12:48:45 GMT&lt;/http:Date>
+    &lt;/con1:response-headers>
+  &lt;/con1:ReceivedFaultDetail>
+&lt;/con:details>
+</detail>}"	Scope_NDFSubProcess														"<UDH/>
+"		52838384	25-MAR-22		
+DB0B6025F53E205FE0530100007FA2FD	OSB	NDF_BankingInfoRead_3376_TCS_PS_1.00	3376			NDF	NDF	prd2osb4_server3	25-MAR-22 05.48.45.987000000 AM	d71553dd-c340-4d10-83c0-66ea1471b0a5	GVID|SupplierID|BusinessProcessID	1000041219|187901335|215113902	Error in Retriving Supplier Banking Details. Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail: REST Business Service returned HTTP response with status 404	Permanent	(BLOB)	OSB-382500		<ctx:details xmlns:ctx="http://www.bea.com/wli/sb/context"><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 404</ns0:faultstring><ns0:http-response-code>404</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Access-Control-Allow-Origin" value="*" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amz-apigw-id" value="PioHNGmWPHcF7RQ=" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Connection" value="keep-alive" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Content-Length" value="0" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-Remapped-Date" value="Fri, 25 Mar 2022 12:48:45 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="x-amzn-RequestId" value="3ac3a27e-cab4-40b6-b9fe-a0eae1d00d0e" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Amzn-Trace-Id" value="Root=1-623dba2d-5b26d139631dc82f5f955f33" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Powered-By" value="Express" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/json</http:Content-Type><http:Date>Fri, 25 Mar 2022 12:48:45 GMT</http:Date></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details>	stage_GET_BankingInformation														"<UDH/>
+"		52838383	25-MAR-22		
+DB0A6D288AF31055E0530100007F1C1E	OSB	AravoAck_IndirectVendor_3422_Sub_PS_1.00	3422			NDF	Aravo	prd2osb4_server3	25-MAR-22 04.40.31.310000000 AM	cd4e3912-e11c-4662-aeda-afd2bcff2405	GVID|SupplierID|BusinessProcessID|MainFlowID	1002624068|136836172|205377504|618666561	"Error invoking Complete Event Task . Type: Permanent.OSB Failure Reason: OSB Service Callout action received SOAP Fault response.Detail:  Details: soapenv:ServerREST Business Service returned HTTP response with status 409409no-cache, no-store, must-revalidatekeep-alive0application/xml; charset=iso-8859-1Fri, 25 Mar 2022 11:40:31 GMTno-cache<cookie-values xmlns="http://www.bea.com/wli/sb/transports/http">
+  <value>rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 11:40:30 GMT</value>
+  <value>JSESSIONID=47039E2DA13846B144432BF114C73A08; Path=/aems; Secure; HttpOnly</value>
+</cookie-values>."	Permanent	(BLOB)	OSB-382500	NA	"<ctx:fault xmlns:ctx="http://www.bea.com/wli/sb/context"><ctx:errorCode>OSB-382500</ctx:errorCode><ctx:reason>OSB Service Callout action received SOAP Fault response</ctx:reason><ctx:details><ns0:ReceivedFaultDetail xmlns:ns0="http://www.bea.com/wli/sb/stages/transform/config"><ns0:faultcode xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Server</ns0:faultcode><ns0:faultstring>REST Business Service returned HTTP response with status 409</ns0:faultstring><ns0:http-response-code>409</ns0:http-response-code><ns0:response-headers xsi:type="http:HttpResponseHeaders" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><tp:user-header name="Expires" value="Thu, 24 Mar 2022 11:40:31 GMT" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Keep-Alive" value="timeout=20" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Referrer-Policy" value="origin-when-cross-origin" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-Content-Type-Options" value="nosniff" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-DEVELOPER-MESSAGE" value="execution(void com.aravo.sim.platform.services.businessprocess.BusinessProcessService.completeWaitTask(Integer))" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-ID" value="ERRID-97a594135--2ccf7ce2-6136-4732-ab4f-aa57803607a5" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-ERROR-MESSAGE" value="Current task with name &quot;SAP Bank Confirmation&quot; is not configured to complete on IntegrationTaskAutoComplete event" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-FRAME-OPTIONS" value="SAMEORIGIN" xmlns:tp="http://www.bea.com/wli/sb/transports"/><tp:user-header name="X-XSS-Protection" value="1; mode=block" xmlns:tp="http://www.bea.com/wli/sb/transports"/><http:Cache-Control>no-cache, no-store, must-revalidate</http:Cache-Control><http:Connection>keep-alive</http:Connection><http:Content-Length>0</http:Content-Length><http:Content-Type>application/xml; charset=iso-8859-1</http:Content-Type><http:Date>Fri, 25 Mar 2022 11:40:31 GMT</http:Date><http:Pragma>no-cache</http:Pragma><http:Set-Cookie>&lt;cookie-values xmlns="http://www.bea.com/wli/sb/transports/http"&gt;
+  &lt;value&gt;rememberMe=deleteMe; Path=/aems; Max-Age=0; Expires=Thu, 24-Mar-2022 11:40:30 GMT&lt;/value&gt;
+  &lt;value&gt;JSESSIONID=47039E2DA13846B144432BF114C73A08; Path=/aems; Secure; HttpOnly&lt;/value&gt;
+&lt;/cookie-values&gt;</http:Set-Cookie></ns0:response-headers></ns0:ReceivedFaultDetail></ctx:details><ctx:location><ctx:node>PipeLinePair</ctx:node><ctx:pipeline>PipeLinePair_request</ctx:pipeline><ctx:stage>stage_POST_CompleteTaskEvent</ctx:stage><ctx:path>request-pipeline</ctx:path></ctx:location></ctx:fault>"	stage_POST_CompleteTaskEvent	jms://int-osb4-01-v-prd2:9403,int-osb4-02-v-prd2:9403,int-osb4-03-v-prd2:9403,int-osb4-04-v-prd2:9403/jms.osbXAConnectionFactory/jms.vendorMasterAck_CDM	2	ID:<540643.1648208421134.0>	1648208421134	1648813221254	false	4					2147483647	1	"<UDH>
+<H>
+<K>JMS_BEA_RedeliveryLimit</K>
+<V>2147483647</V>
+</H>
+<H>
+<K>tracking_parentComponentInstanceId</K>
+<V>bpel:1551065354</V>
+</H>
+<H>
+<K>NIC</K>
+<V>4030</V>
+</H>
+<H>
+<K>GVID</K>
+<V>1002624068</V>
+</H>
+<H>
+<K>tracking_execution_context</K>
+<V>1.c1659dd9-bb75-4d67-87e4-52750a671f7c-00236c73;lYPEm6hhv0YOjITOZSPPi3VRXU8TmHROfPQRbUBGjTOSjJTQoLPIiJSTXURO_PGPt6DCt1ECq5EDl0XLjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP1HDDp1CCr4FCs3DWq6GRjNTI^PKCk0CCEQSCiMUONLECeROJBPSPt9PPl9MDk7KTk0EC_JOM0_RRmHROgLQBnVPOi4USXJRQdURPi1LTdLRSZPQRbVGS_ITOoPRRiUHOhLPHnHOSGLVScGMSjJPPnJSWZVQSXJOR_UBSjHQBoITOZRPQiNQB3VPRkVRSdKTPJJHG5UOTdKTU9KPDq0CCk2CWZVQSXJOR_UBSjHQBoITOZRPQiNQBHLTQ_JVOdURPJJHG5UOTdKTU9KPDq0CCk7CWMVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrLIT_UOT9KPGo6DDl1ECt3CDq0XPjITOZSPPi3VRXU8TmHROfPQRbU9IiJSTXURO_PGP3ITPXKTQjUOLdTPP4HEDo8ECk8CDm1DCn2CWUVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJIS_HOTdVQRKPPR_KHCq4CEm0FDn1FCr5CC0XNRmHROgLQBnVPOi4USXJRQdURPi6GRjNTI^PEDl8EDq6DDq1CWMVQSXJOR_UBSjHQBoITOZRPQiNQBJJHG5UOTdKTU9KPDq0CCl1CWXVQSXJOR_UBSjHQBoITOZRPQiNQB6SRRrJNG1GLOmKTQoPRRiPGPl2CW3JOTsLKS^HOT_JLSgKCTmLTP</V>
+</H>
+<H>
+<K>BANKINGINFO</K>
+<V>
+<NdfIndirectBankingExportCollection xmlns="http://xmlns.int.nike.com/SupplierBankingInfo">
+<SupplierBankingInfo xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+<id>136836172-145904782</id>
+<bankingInformationCrossReferenceKey>145904782</bankingInformationCrossReferenceKey>
+<bankingInformationIdentifier>1302624021</bankingInformationIdentifier>
+<bankingInformationActiveIndicator>true</bankingInformationActiveIndicator>
+<bankAccountHolderName>Airgas USA, LLC</bankAccountHolderName>
+<swiftBicCode>CHASUS33</swiftBicCode>
+<bankName>JP MORGAN CHASE BANK</bankName>
+<currencyCode>USD</currencyCode>
+<currencyCodeDescription>USD - United States dollar</currencyCodeDescription>
+<bankAccountNumber>550372251</bankAccountNumber>
+<bankAddress>2710 MEDIA CENTER DR, BLDG 6 STE 120, LOS ANGELES CA 90065</bankAddress>
+<bankCity>LOS ANGELES</bankCity>
+<bankCountryCode>US</bankCountryCode>
+<bankCountryDescription>United States of America</bankCountryDescription>
+<sapBankKey>021000021</sapBankKey>
+<bankAccountControlKey>01</bankAccountControlKey>
+<bankType>1</bankType>
+<bankAccountType>Chequing</bankAccountType>
+<bankAccountTypeDescription>Chequing (Current)</bankAccountTypeDescription>
+<intermediaryBankRequiredIndicator>false</intermediaryBankRequiredIndicator>
+</SupplierBankingInfo>
+</NdfIndirectBankingExportCollection>
+</V>
+</H>
+<H>
+<K>ACCOUNTGROUP</K>
+<V>Indirect Trade</V>
+</H>
+<H>
+<K>tracking_compositeInstanceId</K>
+<V>619126561</V>
+</H>
+<H>
+<K>VENDORRELATIONSHIP</K>
+<V>
+<supplier xmlns="http://xmlns.int.nike.com/IndirectSupplier"/>
+</V>
+</H>
+<H>
+<K>SUPLRID</K>
+<V>136836172</V>
+</H>
+<H>
+<K>BPID</K>
+<V>205377504</V>
+</H>
+<H>
+<K>tracking_conversationId</K>
+<V>urn:5a1425aa-ac30-11ec-b7b5-020913d3cf76</V>
+</H>
+<H>
+<K>tracking_ecid</K>
+<V>6359550b-5050-448a-b57c-daab1e3767e1-00240367</V>
+</H>
+</UDH>
+"	<StaticFields xmlns="http://www.nike.com/StaticVariables"><PlatformName>Fusion</PlatformName><ServiceName>GEM_NDF_SupplierReadIndirect_3374_SCS_PS_1.00</ServiceName><LinkID/><TrackID>cd4e3912-e11c-4662-aeda-afd2bcff2405</TrackID><BKeyName>GVID|SupplierID|BusinessProcessID|MainFlowID</BKeyName><BKeyText>1002624068|136836172|205377504|618666561</BKeyText><SendingApplicationText>NDF</SendingApplicationText><TargetApplicationText>NDF</TargetApplicationText><SenderText>NDFSubProcess</SenderText><FileName>NA</FileName></StaticFields>	52836963	25-MAR-22		
+DB09BE62048028C2E0530100007F9157	Fusion	VendorMaster_3375_MainProcess	3375		MainProcess	NDF	NDF	prd2soa1_server3	25-MAR-22 03.52.21.267000000 AM	eeafd33e-a580-4311-a2b1-e99060739cb3	GVID|SupplierID|BusinessProcessID|MainFlowID	1001004151|98703580|216294320|618666066	Failed to process. ScopeName : Scope_ValidateRemitToAddrContainsCmpy,FaultName : bpelx:missingCompanyCode, FaultMessage :  Remit To Address: false doesn't contain  company code associated with it	Permanent	(BLOB)	bpelx:missingCompanyCode	NA	"com.oracle.bpel.client.BPELFault: faultName: {{http://schemas.oracle.com/bpel/extension}missingCompanyCode}
+messageType: {{http://schemas.oracle.com/bpel/extension}RuntimeFaultMessage}
+parts: {{
+summary=<summary xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> Remit To Address: false doesn't contain  company code associated with it</summary>
+,code=<code xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">BPEL-ERR01</code>
+,detail=<detail xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>}"	Scope_ValidateRemitToAddrContainsCmpy														"<UDH/>
+"		52834965	25-MAR-22		
