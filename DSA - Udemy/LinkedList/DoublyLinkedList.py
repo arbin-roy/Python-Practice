@@ -38,17 +38,88 @@ class DoublyLinkedList:
                 while index < position - 1:
                     currentNode = currentNode.next
                     index += 1
-                newNode.prev = currentNode
-                newNode.next = currentNode.next
-                print(newNode.next)
-                print('hui')
+                if currentNode == self.tail:
+                    newNode.prev = currentNode
+                    newNode.next = currentNode.next
+                    currentNode.next = newNode
+                    self.tail = newNode
+                else:
+                    newNode.prev = currentNode
+                    newNode.next = currentNode.next
+                    newNode.next.prev = newNode
+                    currentNode.next = newNode
+
+    def traverseForwardDLL(self):
+        if self.head is None:
+            return "LinkedList is empty"
+        node = self.head
+        while node:
+            print(node.value)
+            node = node.next
+
+    def traverseBackwardDLL(self):
+        if self.head is None:
+            return "LinkedList is empty"
+        node = self.tail
+        while node:
+            print(node.value)
+            node = node.prev
+
+    def searchDLL(self, value):
+        if self.head is None:
+            return "LinkedList is empty"
+        node = self.head
+        while node:
+            if node.value == value:
+                return "Element found!"
+            node = node.next
+        return "Element not found!"
+
+    def deleteDLL(self, position):
+        if self.head is None:
+            return "Nothing to delete from an empty LinkedList!"
+        else:
+            if self.head == self.tail:
+                self.head = self.tail = None
+                return [n.value for n in self]
+            elif position == 0:
+                self.head.next.prev = None
+                self.head = self.head.next
+                return [n.value for n in self]
+            elif position == -1:
+                self.tail.prev.next = None
+                self.tail = self.tail.prev
+                return [n.value for n in self]
+            else:
+                node = self.head
+                index = 0
+                while index < position - 1:
+                    node = node.next
+                    index += 1
+                node.next = node.next.next
+                node.next.prev = node
+                return [n.value for n in self]
+
+    def deleteEntireDLL(self):
+        node = self.head
+        if node is None:
+            return "LinkedList is empty!"
+        while node:
+            node.prev = None
+            node = node.next
+        self.head = self.tail = None
+        return [n.value for n in self]
 
 
 doublyLinkedList = DoublyLinkedList(0)
-print([node.value for node in doublyLinkedList])
 doublyLinkedList.insertDLL(1, -1)
 doublyLinkedList.insertDLL(2, -1)
-doublyLinkedList.insertDLL(3, -1)
+doublyLinkedList.insertDLL(3, 3)
 doublyLinkedList.insertDLL(4, -1)
 doublyLinkedList.insertDLL(5, -1)
 print([node.value for node in doublyLinkedList])
+# doublyLinkedList.traverseForwardDLL()
+# doublyLinkedList.traverseBackwardDLL()
+# print(doublyLinkedList.searchDLL(9))
+# print(doublyLinkedList.deleteDLL(0))
+print(doublyLinkedList.deleteEntireDLL())
