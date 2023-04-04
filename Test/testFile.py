@@ -60,3 +60,4 @@ if __name__ == "__main__":
     # test(5)
     # print(removeDuplicateElements([10, 23, 65, 34, 78, 23, 45, 18, 34]))
     print(stringProcessor('Samsung galaxy s4', 'galaxy s4 Samsung'))
+    print([0] * (3 * 3))

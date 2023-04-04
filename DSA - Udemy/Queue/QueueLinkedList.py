@@ -49,7 +49,7 @@ class Queue:
             return val
 
     def peek(self):
-        return "Queue is empty!" if self.isEmpty() else self.linkedList.front.value
+        return "Queue is empty!" if self.isEmpty() else self.linkedList.front
 
     def delete(self):
         self.linkedList.front = self.linkedList.rear = None
