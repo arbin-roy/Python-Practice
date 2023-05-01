@@ -56,13 +56,13 @@ class Queue:
         return "Queue deleted!"
 
 
-queue = Queue()
-queue.enQueue(1)
-queue.enQueue(2)
-queue.enQueue(3)
-queue.enQueue(4)
-print(queue)
-print(queue.deQueue())
-print(queue.delete())
-print(queue)
+# queue = Queue()
+# queue.enQueue(1)
+# queue.enQueue(2)
+# queue.enQueue(3)
+# queue.enQueue(4)
+# print(queue)
+# print(queue.deQueue())
+# print(queue.delete())
+# print(queue)
 # print(queue.peek())
