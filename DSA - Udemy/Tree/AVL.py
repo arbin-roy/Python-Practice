@@ -78,9 +78,7 @@ def rightRotate(disBalancedNode):
 
 
 def leftRotate(disBalancedNode):
-    print(disBalancedNode.data, disBalancedNode.rightChild.data, disBalancedNode.rightChild.rightChild.data)
     newRoot = disBalancedNode.rightChild
-    print(disBalancedNode.rightChild.leftChild)
     disBalancedNode.rightChild = disBalancedNode.rightChild.leftChild
     newRoot.leftChild = disBalancedNode
     disBalancedNode.height = 1 + max(getHeight(disBalancedNode.leftChild), getHeight(disBalancedNode.rightChild))
@@ -109,7 +107,6 @@ def insertNode(rootNode, nodeValue):
         rootNode.leftChild = leftRotate(rootNode.leftChild)
         return rightRotate(rootNode)
     if balance < -1 and nodeValue > rootNode.rightChild.data:   # RR Condition
-        print('RR')
         return leftRotate(rootNode)
     if balance < -1 and nodeValue < rootNode.rightChild.data:   # RL Condition
         rootNode.rightChild = rightRotate(rootNode.rightChild)
@@ -117,8 +114,57 @@ def insertNode(rootNode, nodeValue):
     return rootNode
 
 
+def getMinValueNode(rootNode):
+    if rootNode is None or rootNode.leftChild is None:
+        return rootNode
+    return getMinValueNode(rootNode.leftChild)
+
+
+def deleteNode(rootNode, nodeValue):
+    if not rootNode:
+        return rootNode
+    elif nodeValue < rootNode.data:
+        rootNode.leftChild = deleteNode(rootNode.leftChild, nodeValue)
+    elif nodeValue > rootNode.data:
+        rootNode.rightChild = deleteNode(rootNode.rightChild, nodeValue)
+    else:
+        if rootNode.leftChild is None:
+            temp = rootNode.rightChild
+            rootNode = None
+            return temp
+        elif rootNode.rightChild is None:
+            temp = rootNode.leftChild
+            rootNode = None
+            return temp
+        temp = getMinValueNode(rootNode.rightChild)
+        rootNode.data = temp.data
+        rootNode.rightChild = deleteNode(rootNode.rightChild, temp.data)
+    rootNode.height = 1 + max(getHeight(rootNode.leftChild), getHeight(rootNode.rightChild))
+    balance = getBalance(rootNode)
+    if balance > 1 and getBalance(rootNode.leftChild) >= 0:     # LL Condition
+        return rightRotate(rootNode)
+    if balance < -1 and getBalance(rootNode.rightChild) <= 0:   # RR Condition
+        return leftRotate(rootNode)
+    if balance > 1 and getBalance(rootNode.leftChild) < 0:      # LR Condition
+        rootNode.leftChild = leftRotate(rootNode.leftChild)
+        return rightRotate(rootNode)
+    if balance < -1 and getBalance(rootNode.rightChild) > 0:    # RL Condition
+        rootNode.rightChild = rightRotate(rootNode.rightChild)
+        return leftRotate(rootNode)
+    return rootNode
+
+
+def deleteEntireAVL(rootNode):
+    rootNode.data = None
+    rootNode.leftChild = None
+    rootNode.rightChild = None
+    return "The AVL has been successfully deleted"
+
+
 newAVL = AVLNode(5)
 newAVL = insertNode(newAVL, 10)
 newAVL = insertNode(newAVL, 15)
 newAVL = insertNode(newAVL, 20)
+# newAVL = deleteNode(newAVL, 15)
+print(deleteEntireAVL(newAVL))
 levelOrderTraversal(newAVL)
