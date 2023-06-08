@@ -18,4 +18,4 @@ def binarySearch(array, searchValue):
 
 
 cArr = [8, 9, 12, 15, 17, 19, 20, 21, 28]
-print(binarySearch(cArr, 30))
+print(binarySearch(cArr, 20))
